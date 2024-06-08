@@ -8,7 +8,7 @@ If you'd like to do it below is a step-by-step guide on how to accomplish this:
 
 Sign in to the Azure Portal: Go to portal.azure.com and log in with your Azure account, after signing in create a virtual machine. 
 
-**Step 1: Create an Azure Virtual Machine (VM)**
+## **Step 1: Create an Azure Virtual Machine (VM)**
 
 - Navigate to **"Virtual Machines"** and click **"Create"**.
 - Select a **"Resource Group"** or create a new one. In my case i already had a resource group. 
@@ -28,7 +28,7 @@ Sign in to the Azure Portal: Go to portal.azure.com and log in with your Azure a
 
 
 
-**Step 2: connect to the VM and install a Web Server**
+## **Step 2: connect to the VM and install a Web Server**
 
 - Connect to the VM by using SSH. 
 ````
@@ -46,8 +46,22 @@ sudo apt install apache2 -y
 To rectify that, 
 
 
-**Step 3: Create a Network Security Group(NSG)**
-- Navigate to nsg on the Azure portal. You will see an NSG that was created alongsides the VM, click into it and create an inbound rule that allows web traffic. 
+## **Step 3: Create a Network Security Group(NSG)**
+- Navigate to nsg on the Azure portal. You will see an NSG that was created alongsides the VM, click into it and create an inbound rule that allows web traffic.
+  
+![annotely_image (16)](https://github.com/Temiloluwa01/Projects/assets/116880220/c2e31459-b142-4f4c-b317-d77b84783f86)
+
+- Create an inbound security rule thats allows HTTP traffic to the VM so that the web server can be accessible on the internet.
+  
+![annotely_image (17)](https://github.com/Temiloluwa01/Projects/assets/116880220/cf19ce5a-2250-4823-8d33-da4283165cd6)
+
+- Now verify the Web Server again. Open a browser and navigate to the public IP of your VM to ensure the web server is running. You will see that the the web server is now working.
+
+![Screenshot 2024-06-05 021824](https://github.com/Temiloluwa01/Projects/assets/116880220/6afd7053-7c73-48b2-a08a-7231c7a52a63)
+
+
+
+
 
 
 
