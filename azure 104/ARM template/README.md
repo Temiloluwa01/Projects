@@ -33,9 +33,31 @@ Sign in to the Azure Portal: Go to portal.azure.com and log in with your Azure a
   After inputting the information required click on **purchase** to purchase the service. 
 
 ![annotely_image (22)](https://github.com/Temiloluwa01/Projects/assets/116880220/4701bbe1-3252-43c7-9917-9ed421a943f1)
+- When you click on **Purchase**, your input will be validated.
+  
+  Once the validation is complete, deploymnent of the virtaul machine will start.
+  After the virtual machine has been deployed, connect to the VM and install an Apache Web Server.
+   ### **Note: The credentials asked for depends on the paramters used in the template**.
 
+## **Step 2: connect to the VM and install the Apache Web Server**
 
-## Note: The credentials asked for depends on the paramters used in the template. 
+- Connect to the VM by using SSH.
+   
+````
+SSH VMname@vmipaddress
+````
+- Update the VM dependencies and Install an Apache Web Server
+    
+````
+Sudo apt update -y
+sudo apt upgrade -y
+sudo apt install apache2 -y
+
+````
+
+- Now verify the Web Server. Open a browser and navigate to the public IP of your VM to ensure the web server is running. You will see that the the web server is now working.
+
+![Screenshot 2024-06-05 021824](https://github.com/Temiloluwa01/Projects/assets/116880220/6afd7053-7c73-48b2-a08a-7231c7a52a63)
 
 
 
